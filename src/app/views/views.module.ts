@@ -1,3 +1,5 @@
+import { ComponentsModule } from './../components/components.module';
+import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OrderComponent } from './order/order.component';
@@ -10,8 +12,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     OrderComponent,
     OrderDetailsComponent,
     AddOrderComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, SharedModule, ComponentsModule],
 })
 export class ViewsModule {}
